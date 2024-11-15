@@ -27,7 +27,7 @@ Below is the cloud architecture diagram designed for this project. The diagram w
 - **Security Services:** IAM roles, security groups, and NACLs.
 - **Flow of Data:** Clearly illustrates data flow from public subnets to private subnets and the database layer in a secure manner.
 
-![Architecture Diagram](./architecture-diagram.png)
+![AWS-Cloud-Architecting-Project](Architecture_Diagram/Artchiteture.drawio.png)
 
 ---
 
