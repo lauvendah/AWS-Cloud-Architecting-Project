@@ -25,7 +25,7 @@ The architecture includes the following components:
 8. **AWS Secrets Manager**: Manages sensitive information, such as database credentials, in a secure and encrypted manner.
 
 ## Architecture Diagram  
-![AWS-Cloud-Architecting-Project/Architecture_Diagram](Capstone Artchiteture.drawio.png)  
+![AWS-Cloud-Architecting-Project/Architecture_Diagram](Artchiteture.drawio.png)  
 *(Replace with the path to your architecture diagram image)*
 
 ## Deployment Notes  
