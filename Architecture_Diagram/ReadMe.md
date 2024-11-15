@@ -1,7 +1,3 @@
-Here’s an updated `README.md` file for the Architecture Diagram of your AWS Academy Cloud Architecting Capstone Project, incorporating information from the uploaded architecture diagram:
-
----
-
 # Architecture Diagram for AWS Academy Cloud Architecting Capstone Project
 
 ## Project Overview  
