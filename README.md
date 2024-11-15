@@ -1,124 +1,110 @@
-# AWS-Cloud-Architecting-Project
+Here's a structured README file based on the provided rubric and using the details of your project:
+
+---
+
+# AWS Cloud Architecting Capstone Project
 A repository for the final capstone project of the AWS Academy Cloud Architecting Course
 
-Here’s a **Markdown rubric** for this `README.md` file tailored to the Capstone Project final submission. This rubric will guide learners on structuring a comprehensive and professional `README.md` for your project repositories.
+## Introduction
 
+### 1. Project Title
+**Cloud Architecting Capstone Project: Scalable High Availability E-commerce Application**
 
-## Introduction  
-### 1. Project Title  
-- Provide a clear, descriptive, and professional title for your project.  
+### 2. Project Overview
+This project demonstrates the design and deployment of a scalable and highly available cloud infrastructure on AWS for an e-commerce application. The architecture leverages multiple AWS services to provide a secure, resilient, and cost-effective solution. Key components include VPC, subnets, load balancers, EC2 instances, and security services.
 
-**Example:**  
-`Cloud Architecting Capstone Project: Scalable High Availabity E-commerce Application`
-
----
-
-### 2. Project Overview  
-- Summarize the project in 2-3 sentences. Include the purpose, high-level functionality, and key AWS services used.  
-
-**Checklist:**  
-- [ ] What problem does this project solve?  
-- [ ] Why is this solution important?  
-- [ ] What is the primary AWS architecture implemented?
+- **Problem:** Building a reliable, high-availability infrastructure to handle fluctuating e-commerce traffic.
+- **Solution Importance:** Ensures consistent user experience with minimal downtime and optimized costs.
+- **Primary Architecture:** Multi-AZ VPC with public, private, and database subnets, autoscaling EC2 instances, and NAT gateways for internet access.
 
 ---
 
-## Architecture Diagram  
-- Include a detailed architecture diagram of your solution. You can use tools like **Lucidchart**, **Draw.io**, or **AWS Architecture Diagramming Tool**.  
+## Architecture Diagram
+Below is the cloud architecture diagram designed for this project. The diagram was created using **Draw.io** and outlines the key AWS components within the architecture, such as VPC, subnets, internet gateway, NAT gateway, application servers, and security roles.
 
-**Checklist:**  
-- [ ] Does the diagram include all key components (e.g., VPC, subnets, load balancers, EC2 instances, S3 buckets)?  
-- [ ] Are security services like IAM roles, security groups, and KMS indicated?  
-- [ ] Is the flow of data/workload clearly illustrated?  
+**Checklist:**
+- **Components:** VPC, public and private subnets, NAT gateway, internet gateway, EC2 instances, and RDS database.
+- **Security Services:** IAM roles, security groups, and NACLs.
+- **Flow of Data:** Clearly illustrates data flow from public subnets to private subnets and the database layer in a secure manner.
 
----
-
-## Features and Functionality  
-### 1. Key Features  
-- List and briefly describe the primary features of your project.  
-
-**Example:**  
-- `Autoscaling`: Automatically adjusts the number of instances based on traffic.  
-- `Highly Available`: Built using multi-AZ deployment.  
-- `Cost Optimization`: Utilizes AWS pricing models such as Reserved Instances or Spot Instances.  
-
-### 2. AWS Services Used  
-- Provide a list of AWS services with a short explanation of their role in the project.  
-
-**Example:**  
-- `Amazon S3`: Stores static assets like images and files.  
-- `Amazon RDS`: Hosts the relational database for the application.
+![Architecture Diagram](./architecture-diagram.png)
 
 ---
 
-## Deployment  
-### 1. Prerequisites  
-- List any software, tools, or AWS configurations required to deploy the project.  
+## Features and Functionality
 
-**Example:**  
-- `AWS CLI` installed and configured.  
-- IAM user with admin privileges.  
+### 1. Key Features
+- **Autoscaling:** Automatically adjusts the number of instances based on incoming traffic.
+- **High Availability:** Configured with multi-AZ deployment for resiliency.
+- **Cost Optimization:** Utilizes reserved instances and scalable resources to manage costs effectively.
 
-### 2. Step-by-Step Deployment Instructions  
-- Provide a clear, concise set of steps for deploying the project.  
-
-**Checklist:**  
-- [ ] Include instructions for launching CloudFormation templates or Terraform scripts (if applicable).  
-- [ ] Detail any manual configurations in the AWS Management Console.  
-
----
-
-## Security  
-- Describe security measures implemented in your architecture.  
-
-**Example:**  
-- `IAM Roles`: Restrict access to resources based on least privilege.  
-- `Encryption`: S3 bucket encryption using SSE-KMS.  
-- `Network Security`: Configured security groups and NACLs.  
+### 2. AWS Services Used
+- **Amazon VPC:** Provides isolated networking with custom subnets and routing.
+- **Amazon EC2:** Hosts the application servers with autoscaling configured.
+- **Amazon RDS:** Managed relational database for data storage.
+- **Amazon S3:** Stores static assets such as images and files.
+- **Amazon IAM:** Manages access to resources with role-based permissions.
+- **Amazon CloudWatch:** Monitors and logs infrastructure performance.
 
 ---
 
-## Testing and Validation  
-### 1. Testing Strategy  
-- Describe how the project was tested, including tools used (e.g., Postman, AWS CloudWatch Logs).  
+## Deployment
 
-**Checklist:**  
-- [ ] What tests were conducted (e.g., load testing, failover testing)?  
-- [ ] Include commands, test cases, or examples.  
+### 1. Prerequisites
+- **AWS CLI** installed and configured on your local machine.
+- IAM user with sufficient privileges for resource creation.
+- **Draw.io** or any diagramming tool to edit architecture.
 
----
-
-## Challenges and Learnings  
-- Reflect on any challenges faced during implementation and what you learned from them.  
-
-**Example:**  
-- Challenge: Setting up an ALB to route traffic between subnets.  
-- Learning: Gained hands-on experience with cross-zone load balancing.  
+### 2. Step-by-Step Deployment Instructions
+1. **Set up VPC:** Create a new VPC and configure public and private subnets across two availability zones.
+2. **Deploy Internet Gateway and NAT Gateway:** Attach an internet gateway to the VPC and configure a NAT gateway in the public subnet.
+3. **Launch EC2 Instances:** Configure auto-scaling groups and security groups to manage incoming traffic.
+4. **Set up RDS Database:** Deploy an RDS instance in a private subnet with proper security configurations.
+5. **Configure IAM Roles and Security Policies:** Apply least-privilege IAM roles to resources as needed.
 
 ---
 
-## Future Improvements  
-- Suggest potential upgrades or optimizations for the project.  
+## Security
 
-**Example:**  
-- Implement CI/CD using AWS CodePipeline.  
-- Enhance monitoring with Amazon CloudWatch Insights.
+- **IAM Roles:** Implemented role-based access control to ensure least privilege.
+- **Network Security:** Configured security groups and NACLs to restrict access to public and private resources.
 
 ---
 
-## Contributors  
-- List team members and their contributions.  
+## Testing and Validation
 
-**Example:**  
-`Jane Doe - Architecture Design, Documentation`  
-`John Smith - Deployment, Security Configuration`
+### 1. Testing Strategy
+- **Load Testing:** Simulated high traffic to validate autoscaling functionality .
+- **Failover Testing:** Tested high availability by simulating an AZ failure.
+
+
+---
+
+## Challenges and Learnings
+
+- **Challenge:** Configuring cross-zone load balancing with the ALB.
+- **Learning:** Gained practical skills in setting up AWS networking services, including internet and NAT gateways for isolated subnets.
 
 ---
 
-## License  
-- Include licensing information for your project (if applicable).  
+## Future Improvements
 
-**Example:**  
-This project is licensed under the MIT License.
+- **Implement CI/CD:** Use AWS CodePipeline to automate application deployment.
+- **Enhanced Monitoring:** Incorporate CloudWatch Insights for deeper analysis of application performance.
 
 ---
+
+## Contributors
+
+- **Lauvendah Nekesa** - Architecture Design, Documentation.
+
+
+---
+
+## License
+
+
+
+--- 
+
+This README.md structure ensures clarity, professionalism, and thoroughness for presenting your project. Add any additional specifics or screenshots to enhance the document.
