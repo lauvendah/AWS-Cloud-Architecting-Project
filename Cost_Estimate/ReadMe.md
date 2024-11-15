@@ -1,25 +1,39 @@
+Here’s an updated `README.md` file using the cost estimate information from the uploaded document:
+
+---
+
 # Cost Estimate for AWS Academy Cloud Architecting Capstone Project
 
-## Project Overview  
+## Project Overview
 This repository contains the cost estimate for the Cloud Architecting Capstone Project. The goal is to design a scalable, cost-effective cloud architecture using AWS services while adhering to the Well-Architected Framework.
 
-## Estimated Monthly Cost Breakdown  
+## Estimated Monthly Cost Breakdown
 
-| **Service**            | **Usage**                       | **Estimated Cost (USD)** |
-|-------------------------|----------------------------------|--------------------------|
-| Amazon EC2             | 3 t3.micro instances (750 hours)| $22.32                  |
-| Amazon S3              | 50 GB storage + 10,000 requests | $7.00                   |
-| Amazon RDS             | db.t3.micro instance            | $13.82                  |
-| Amazon CloudFront      | 1 TB data transfer              | $85.00                  |
-| AWS Lambda             | 1 million invocations           | $0.20                   |
-| Amazon Route 53        | 3 hosted zones + 100 queries    | $1.50                   |
-| **Total Estimated Cost** | **N/A**                       | **$129.84/month**       |
+| **Service**              | **Usage**                                  | **Estimated Cost (USD)** |
+|--------------------------|--------------------------------------------|--------------------------|
+| Amazon EC2               | 2 t3.micro instances (On-Demand)           | $0.15                    |
+| Elastic Load Balancing   | 2 Application Load Balancers               | $32.86                   |
+| Amazon RDS (MySQL)       | 2 db.m1.small instances, 20 GB storage     | $11.61                   |
+| AWS Secrets Manager      | 2 secrets, API calls (monthly)             | $0.80                    |
+| **Total Estimated Cost** | **N/A**                                    | **$45.42/month**         |
 
-## Cost Optimization Considerations  
-- Use **Free Tier** wherever possible.  
-- Optimize S3 by enabling lifecycle policies for older objects.  
-- Leverage **Spot Instances** for non-critical workloads.  
-- Enable **AWS Cost Explorer** for real-time monitoring.  
+## Additional Details
+- **Region**: US East (N. Virginia)
+- **Instance Types**: EC2 (t3.micro), RDS (db.m1.small)
+- **Pricing Strategy**: On-Demand for consistent workload
 
-## Disclaimer  
-This cost estimate is approximate and may vary based on actual usage and AWS pricing updates. Check the [AWS Pricing Calculator](https://calculator.aws) for detailed calculations.  
+## Annual Cost Estimate
+| **Total 12 Months Cost** | **$545.04/year** |
+
+## Cost Optimization Considerations
+- **Use Free Tier**: Where applicable, leverage AWS Free Tier offerings.
+- **Right-Sizing**: Review instance sizes and adjust based on actual workloads.
+- **Enable Monitoring**: Use CloudWatch to optimize resource usage and reduce costs.
+- **Cost Management Tools**: Utilize AWS Cost Explorer for real-time tracking and insights.
+
+## Disclaimer
+This cost estimate is approximate and may vary based on actual usage and AWS pricing updates. Check the [AWS Pricing Calculator](https://calculator.aws) for more details and up-to-date calculations.
+
+---
+
+This structure provides a clear summary of the estimated monthly costs and optimization recommendations based on the detailed information provided in the cost estimate file.
